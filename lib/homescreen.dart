@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future getWeather() async {
     final url = Uri.parse(
-        'http://api.openweathermap.org/data/2.5/weather?q=$cityName&units=metric&appid=0648669a2613abd29847681360d0ca95');
+        'http://api.openweathermap.org/data/2.5/weather?q=$cityName&units=metric&appid={Your Api key here}');//sign in to Open Weather Map and in API section , you'll find your API key . paste it in {Your Api Key here}
     final weather = await http.get(url);
     final response = json.decode(weather.body);
 
